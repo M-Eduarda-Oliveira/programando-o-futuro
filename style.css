@@ -1,3 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap");
+
+/* =========================================
+   VARIÁVEIS: cores e fontes
+   ========================================= */
+
+:root {
+  /* Cores */
+  --cor-verde-escuro: #1e3a2b;
+  --cor-verde-medio: #4b6656;
+  --cor-verde-claro: #cfe0c3;
+  --cor-fundo: #e9efe4;
+  --cor-creme: #f7f5ec;
+  --cor-branco: #ffffff;
+  --cor-destaque: #e3b448;
+  --cor-borda: #c9d6bf;
+
+  /* Fontes */
+  --fonte-titulo: "Fraunces", serif;
+  --fonte-texto: "Source Sans 3", sans-serif;
+}
+
 /* =========================================
    RESET BÁSICO
    ========================================= */
