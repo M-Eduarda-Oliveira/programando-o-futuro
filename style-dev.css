@@ -1,0 +1,264 @@
+/* =========================================
+   TEMA ESCURO (azul-marinho + ciano, estilo "dev")
+   ========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #13213c;
+  --card: #1a2b4d;
+  --linha: #22345a;
+  --borda: #2e4677;
+  --ciano: #5ad2f4;
+  --titulo: #e8eefb;
+  --texto: #9fb0d3;
+  --suave: #6f82ad;
+  --lateral: 80px;
+}
+
+/* =========================================
+   RESET BÁSICO
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: "Space Grotesk", sans-serif;
+  background: var(--bg);
+  color: var(--titulo);
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px var(--lateral);
+  background: var(--bg);
+  border-bottom: 1px solid var(--linha);
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--titulo);
+}
+
+/* chaves { } decorativas em volta do logo */
+.logo::before {
+  content: "{ ";
+  color: var(--ciano);
+}
+
+.logo::after {
+  content: " }";
+  color: var(--ciano);
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+.navbar a {
+  display: block;
+  padding: 12px 18px;
+  border-radius: 12px;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #c9d5ee;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--ciano);
+}
+
+/* "Contato" vira botão de destaque */
+.navbar li:last-child a {
+  background: var(--ciano);
+  color: var(--bg);
+  font-weight: 600;
+}
+
+.navbar li:last-child a:hover {
+  color: var(--bg);
+  filter: brightness(1.1);
+}
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  padding: 100px var(--lateral);
+}
+
+.chamada {
+  flex: 1;
+}
+
+.chamada h1 {
+  margin-bottom: 16px;
+
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.chamada p {
+  max-width: 460px;
+
+  font-size: 1.35rem;
+  line-height: 1.7;
+  color: var(--texto);
+}
+
+/* ---------- Formulário (card discreto com borda fina) ---------- */
+
+.formulario {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 44px;
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: 24px;
+}
+
+.formulario label {
+  margin-top: 8px;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--texto);
+}
+
+.formulario input {
+  padding: 20px 22px;
+
+  font-family: inherit;
+  font-size: 1.1rem;
+  color: var(--titulo);
+  background: var(--bg);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.formulario input::placeholder {
+  color: var(--suave);
+}
+
+.formulario input:focus {
+  border-color: var(--ciano);
+  box-shadow: 0 0 0 3px rgba(90, 210, 244, 0.2);
+}
+
+.formulario button {
+  margin-top: 16px;
+  padding: 20px;
+
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--ciano);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    filter 0.2s,
+    transform 0.15s;
+}
+
+.formulario button:hover {
+  filter: brightness(1.1);
+}
+
+.formulario button:active {
+  transform: scale(0.98);
+}
+
+/* =========================================
+   SECTION SOBRE
+   ========================================= */
+
+.sobre {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 80px var(--lateral);
+  border-top: 1px solid var(--linha);
+}
+
+.sobre h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--ciano);
+}
+
+.sobre p {
+  max-width: 880px;
+
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--texto);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  padding: 32px 24px;
+  border-top: 1px solid var(--linha);
+  color: var(--suave);
+}

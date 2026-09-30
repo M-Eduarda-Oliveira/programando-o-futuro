@@ -1,0 +1,241 @@
+/* =========================================
+   TEMA CLARO (roxo + amarelo, estilo "neo-brutalista")
+   ========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+
+:root {
+  --bg: #f0eaff;
+  --card: #ffffff;
+  --escuro: #2a1b5c;
+  --texto: #5b4b94;
+  --amarelo: #ffd43b;
+  --borda-input: #cfc5f0;
+  --fundo-input: #f9f7ff;
+  --lateral: 70px;
+}
+
+/* =========================================
+   RESET BÁSICO
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: "Nunito", sans-serif;
+  background: var(--bg);
+  color: var(--escuro);
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px var(--lateral);
+  background: var(--bg);
+}
+
+.logo {
+  padding: 12px 24px;
+  border-radius: 999px;
+
+  background: var(--amarelo);
+  color: var(--escuro);
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+}
+
+.navbar a {
+  display: block;
+  padding: 12px 22px;
+  border-radius: 999px;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--escuro);
+  transition: background 0.2s;
+}
+
+.navbar a:hover,
+.navbar li:nth-child(2) a {
+  /* "Sobre" destacado como na imagem */
+  background: var(--card);
+}
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  padding: 48px var(--lateral);
+}
+
+.chamada {
+  flex: 1;
+}
+
+.chamada h1 {
+  margin-bottom: 16px;
+
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.chamada p {
+  max-width: 460px;
+
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--texto);
+}
+
+/* ---------- Formulário (card com sombra sólida) ---------- */
+
+.formulario {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 48px;
+  background: var(--card);
+  border: 3px solid var(--escuro);
+  border-radius: 40px;
+  box-shadow: 12px 12px 0 var(--escuro);
+}
+
+.formulario label {
+  margin-top: 8px;
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.formulario input {
+  padding: 20px 24px;
+
+  font-family: inherit;
+  font-size: 1.15rem;
+  color: var(--escuro);
+  background: var(--fundo-input);
+  border: 2px solid var(--borda-input);
+  border-radius: 20px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.formulario input::placeholder {
+  color: #757575;
+}
+
+.formulario input:focus {
+  border-color: var(--escuro);
+}
+
+.formulario button {
+  margin-top: 16px;
+  padding: 20px;
+
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--escuro);
+  background: var(--amarelo);
+  border: 3px solid var(--escuro);
+  border-radius: 20px;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.formulario button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--escuro);
+}
+
+.formulario button:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+/* =========================================
+   SECTION SOBRE (card branco arredondado)
+   ========================================= */
+
+.sobre {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin: 0 var(--lateral);
+  padding: 64px 70px;
+  background: var(--card);
+  border-radius: 40px;
+}
+
+.sobre h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+.sobre p {
+  max-width: 880px;
+
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--texto);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  padding: 32px 24px;
+  font-weight: 700;
+  color: var(--texto);
+}

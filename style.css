@@ -39,6 +39,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  font-family: var(--fonte-texto);
+  font-size: 18px;
+
+  background-color: var(--cor-fundo);
+  color: var(--cor-verde-escuro);
 }
 
 /* =========================================
@@ -54,13 +60,36 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 16px 24px;
+  padding: 22px 64px;
+  background-color: var(--cor-verde-escuro);
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--cor-creme);
+  text-decoration: none;
 }
 
 .navbar ul {
   display: flex;
   gap: 24px;
   list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cor-verde-claro);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar li:first-child a {
+  color: var(--cor-creme);
+  border-bottom-color: var(--cor-destaque);
 }
 
 /* =========================================
@@ -72,7 +101,7 @@ body {
   align-items: center;
   gap: 32px;
 
-  padding: 48px 24px;
+  padding: 88px 64px;
 }
 
 .chamada {
@@ -81,6 +110,16 @@ body {
 
 .chamada h1 {
   margin-bottom: 16px;
+  font-family: var(--fonte-titulo);
+  font-size: 58px;
+  font-weight: 400;
+
+  margin-bottom: 22px;
+}
+
+.chamada p {
+  font-size: 20px;
+  color: var(--cor-verde-medio);
 }
 
 .formulario {
@@ -89,10 +128,42 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  background-color: var(--cor-creme);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.formulario label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cor-verde-medio);
+}
+
+.formulario input {
+  font-family: inherit;
+  font-size: 18px;
+
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
 }
 
 .formulario button {
   margin-top: 16px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--cor-verde-escuro);
+  padding: 14px;
+  margin-top: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--cor-destaque);
 }
 
 /* =========================================
